@@ -1,0 +1,20 @@
+# Textos dos projetos, um bloco por repositório (a chave é o nome do repositório).
+# Só aparecem no site os repositórios públicos com o topic "portfolio".
+# Sem entrada aqui, o site usa a descrição do GitHub (campo "About") e avisa.
+#
+# Exemplo (descomente e ajuste):
+#
+# projects:
+#   meu-repositorio:
+#     featured: true            # opcional: aparece antes dos demais
+#     title:                    # opcional: o padrão é o nome do repositório
+#       pt: Nome em português
+#       en: Name in English
+#     description:
+#       pt: O que o projeto faz, em uma ou duas frases diretas.
+#       en: What the project does, in one or two direct sentences.
+#     links:                    # opcional: links extras além do repositório
+#       - label: { pt: Documentação, en: Documentation }
+#         url: https://exemplo.dev/docs
+
+projects: {}

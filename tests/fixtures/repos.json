@@ -1,0 +1,15 @@
+{
+  "repos": [
+    {"name": "api-exemplo", "html_url": "https://github.com/Toledooo/api-exemplo", "description": "Example REST API", "homepage": "", "topics": ["portfolio", "fastapi", "python"], "fork": false, "archived": false, "private": false, "stargazers_count": 3, "pushed_at": "2026-10-02T12:00:00Z", "default_branch": "main"},
+    {"name": "rpa-exemplo", "html_url": "https://github.com/Toledooo/rpa-exemplo", "description": null, "homepage": "https://exemplo.dev", "topics": ["portfolio", "n8n"], "fork": false, "archived": false, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-10T12:00:00Z", "default_branch": "main"},
+    {"name": "sem-topic", "html_url": "https://github.com/Toledooo/sem-topic", "description": "x", "topics": ["python"], "fork": false, "archived": false, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-11T12:00:00Z", "default_branch": "main"},
+    {"name": "um-fork", "html_url": "https://github.com/Toledooo/um-fork", "description": "x", "topics": ["portfolio"], "fork": true, "archived": false, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-11T12:00:00Z", "default_branch": "main"},
+    {"name": "arquivado", "html_url": "https://github.com/Toledooo/arquivado", "description": "x", "topics": ["portfolio"], "fork": false, "archived": true, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-11T12:00:00Z", "default_branch": "main"},
+    {"name": "excluido", "html_url": "https://github.com/Toledooo/excluido", "description": "x", "topics": ["portfolio", "no-portfolio"], "fork": false, "archived": false, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-11T12:00:00Z", "default_branch": "main"},
+    {"name": "Toledooo", "html_url": "https://github.com/Toledooo/Toledooo", "description": "profile", "topics": ["portfolio"], "fork": false, "archived": false, "private": false, "stargazers_count": 0, "pushed_at": "2026-11-11T12:00:00Z", "default_branch": "main"}
+  ],
+  "languages": {
+    "api-exemplo": {"Python": 52000, "Dockerfile": 800, "Shell": 400},
+    "rpa-exemplo": {"Python": 21000, "JavaScript": 9000, "HTML": 3000}
+  }
+}

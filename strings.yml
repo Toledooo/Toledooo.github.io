@@ -1,0 +1,59 @@
+# Textos fixos da interface, nos dois idiomas.
+
+skip: { pt: Ir para o conteúdo, en: Skip to content }
+lang_switch: { pt: Mudar para inglês, en: Switch to Portuguese }
+lang_label: { pt: EN, en: PT }
+
+nav:
+  projects: { pt: projetos, en: projects }
+  stack: { pt: stack, en: stack }
+  about: { pt: sobre, en: about }
+  contact: { pt: contato, en: contact }
+
+section:
+  projects: { pt: Projetos, en: Projects }
+  stack: { pt: Stack e estatísticas, en: Stack and stats }
+  about: { pt: Sobre, en: About }
+  contact: { pt: Contato, en: Contact }
+
+cmd:
+  whoami: { pt: whoami, en: whoami }
+  projects: { pt: "ls projetos/", en: "ls projects/" }
+  stack: { pt: "cat stack.md", en: "cat stack.md" }
+  about: { pt: "cat sobre.md", en: "cat about.md" }
+  contact: { pt: "./contato", en: "./contact" }
+
+projects:
+  empty: { pt: "(vazio) Adicione o topic portfolio a um repositório público para ele aparecer aqui.", en: "(empty) Add the portfolio topic to a public repository for it to show up here." }
+  repo: { pt: repositório, en: repository }
+  site: { pt: site, en: site }
+  updated: { pt: atualizado em, en: updated }
+  stars: { pt: estrelas, en: stars }
+  fallback_note: { pt: "(sem tradução)", en: "(not translated)" }
+  preview_alt: { pt: "Prévia do projeto", en: "Project preview" }
+
+stack:
+  main: { pt: Principais, en: Core }
+  other: { pt: Também uso, en: Also use }
+  languages: { pt: "Linguagens nos meus projetos em destaque", en: "Languages across my featured projects" }
+  languages_empty: { pt: Sem dados de linguagens ainda., en: No language data yet. }
+  other_langs: { pt: outras, en: other }
+
+about:
+  focus: { pt: Foco atual, en: Current focus }
+  seeking: { pt: O que busco, en: What I'm looking for }
+  experience: { pt: Experiência, en: Experience }
+  education: { pt: Formação, en: Education }
+
+contact:
+  intro: { pt: "Para vagas, propostas ou projetos:", en: "For roles, proposals or projects:" }
+  ticket: { pt: Abrir chamado, en: Open a ticket }
+  email: { pt: E-mail, en: Email }
+
+footer:
+  built: { pt: "Gerado automaticamente a partir do GitHub em", en: "Automatically generated from GitHub on" }
+
+meta:
+  description:
+    pt: "Portfólio de Gabriel Toledo de Oliveira, desenvolvedor Python: back-end, APIs REST, automação (RPA) e integração com LLMs."
+    en: "Portfolio of Gabriel Toledo de Oliveira, Python developer: back-end, REST APIs, automation (RPA) and LLM integration."

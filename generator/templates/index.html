@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="{{ 'pt-BR' if lang == 'pt' else 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ p.name }} · {{ p.title }}</title>
+<meta name="description" content="{{ t.meta.description }}">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="{{ site_url }}{{ self_url }}">
+<link rel="alternate" hreflang="pt-BR" href="{{ site_url }}{{ base }}/">
+<link rel="alternate" hreflang="en" href="{{ site_url }}{{ base }}/en/">
+<link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ base }}/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ p.name }} · {{ p.title }}">
+<meta property="og:description" content="{{ t.meta.description }}">
+<meta property="og:url" content="{{ site_url }}{{ self_url }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Cpath d='M8 11l7 5-7 5' fill='none' stroke='%233fb950' stroke-width='3'/%3E%3Cpath d='M18 22h7' stroke='%233fb950' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="{{ base }}/assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{{ {"@context": "https://schema.org", "@type": "Person", "name": p.name, "jobTitle": p.title,
+    "url": site_url ~ self_url, "sameAs": [p.links.github, p.links.linkedin]} | tojson }}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">{{ t.skip }}</a>
+
+<header class="top">
+  <span class="ps1" aria-hidden="true">{{ p.handle|lower }}@portfolio:~$</span>
+  <nav aria-label="Menu">
+    <a href="#projects">{{ t.nav.projects }}</a>
+    <a href="#stack">{{ t.nav.stack }}</a>
+    <a href="#about">{{ t.nav.about }}</a>
+    <a href="#contact">{{ t.nav.contact }}</a>
+    <a class="lang" href="{{ alt_url }}" hreflang="{{ 'en' if lang == 'pt' else 'pt-BR' }}" lang="{{ 'en' if lang == 'pt' else 'pt-BR' }}" aria-label="{{ t.lang_switch }}">{{ t.lang_label }}</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="name">
+    <p class="line"><span class="prompt" aria-hidden="true">$</span>
+      <span class="typed" style="--n: {{ t.cmd.whoami|length }}">{{ t.cmd.whoami }}</span><span class="caret" aria-hidden="true"></span></p>
+    <h1 id="name" class="out" style="--k: 1">{{ p.name }}</h1>
+    <p class="out role" style="--k: 2">{{ p.title }}</p>
+    <p class="out dim" style="--k: 3">{{ p.tagline }}</p>
+    <div class="out" style="--k: 4">{{ pipeline }}</div>
+  </section>
+
+  <section id="projects" aria-labelledby="h-projects" class="reveal">
+    <h2 id="h-projects" aria-label="{{ t.section.projects }}"><span class="prompt" aria-hidden="true">$</span> {{ t.cmd.projects }}</h2>
+    {% if projects %}
+    <div class="cards">
+      {% for c in projects %}
+      <article class="card">
+        {% if c.preview %}
+        <img src="{{ base }}/assets/{{ c.preview }}" alt="{{ t.projects.preview_alt }}: {{ c.title }}" width="480" height="240" loading="lazy">
+        {% else %}
+        {{ c.art }}
+        {% endif %}
+        <div class="card-body">
+          <h3><a href="{{ c.url }}">{{ c.title }}</a></h3>
+          {% if c.description %}
+          <p>{{ c.description }}{% if c.fallback %} <small class="note">{{ t.projects.fallback_note }}</small>{% endif %}</p>
+          {% endif %}
+          {% if c.languages or c.topics %}
+          <ul class="tags">
+            {% for l in c.languages %}<li class="lang-tag">{{ l }}</li>{% endfor %}
+            {% for tp in c.topics[:4] %}<li>{{ tp }}</li>{% endfor %}
+          </ul>
+          {% endif %}
+          <p class="meta dim">
+            {% if c.updated %}{{ t.projects.updated }} {{ c.updated }}{% endif %}
+            {% if c.stars %} · ★ {{ c.stars }}{% endif %}
+          </p>
+          <p class="links">
+            <a href="{{ c.url }}">{{ t.projects.repo }}</a>
+            {% if c.homepage %}<a href="{{ c.homepage }}">{{ t.projects.site }}</a>{% endif %}
+            {% for l in c.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+          </p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="dim">{{ t.projects.empty }}</p>
+    {% endif %}
+  </section>
+
+  <section id="stack" aria-labelledby="h-stack" class="reveal">
+    <h2 id="h-stack" aria-label="{{ t.section.stack }}"><span class="prompt" aria-hidden="true">$</span> {{ t.cmd.stack }}</h2>
+    <h3 class="dim">{{ t.stack.main }}</h3>
+    <ul class="chips main">{% for s in p.stack.main %}<li>{{ s }}</li>{% endfor %}</ul>
+    <h3 class="dim">{{ t.stack.other }}</h3>
+    <ul class="chips">{% for s in p.stack.other %}<li>{{ s }}</li>{% endfor %}</ul>
+    <h3 class="dim">{{ t.stack.languages }}</h3>
+    {% if lang_bars %}{{ lang_bars }}{% else %}<p class="dim">{{ t.stack.languages_empty }}</p>{% endif %}
+  </section>
+
+  <section id="about" aria-labelledby="h-about" class="reveal">
+    <h2 id="h-about" aria-label="{{ t.section.about }}"><span class="prompt" aria-hidden="true">$</span> {{ t.cmd.about }}</h2>
+    <p>{{ p.about.summary }}</p>
+    <h3 class="dim">{{ t.about.focus }}</h3>
+    <p>{{ p.about.focus }}</p>
+    <h3 class="dim">{{ t.about.seeking }}</h3>
+    <p>{{ p.about.seeking }}</p>
+
+    <h3 class="dim">{{ t.about.experience }}</h3>
+    <ol class="timeline">
+      {% for e in p.experience %}
+      <li>
+        <p class="when">{{ e.period }}</p>
+        <p class="what"><strong>{{ e.role }}</strong>{% if e.company %} · {{ e.company }}{% endif %}</p>
+        <ul>{% for b in e.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <h3 class="dim">{{ t.about.education }}</h3>
+    <ol class="timeline">
+      {% for e in p.education %}
+      <li>
+        <p class="when">{{ e.period }}</p>
+        <p class="what"><strong>{{ e.title }}</strong> · {{ e.school }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section id="contact" aria-labelledby="h-contact" class="reveal">
+    <h2 id="h-contact" aria-label="{{ t.section.contact }}"><span class="prompt" aria-hidden="true">$</span> {{ t.cmd.contact }}</h2>
+    <p>{{ t.contact.intro }}</p>
+    <p class="actions">
+      {% if contact_url %}<a class="btn" href="{{ contact_url }}">{{ t.contact.ticket }}</a>{% endif %}
+      <a class="btn{{ ' ghost' if contact_url }}" href="mailto:{{ p.links.email }}">{{ t.contact.email }}: {{ p.links.email }}</a>
+      <a class="btn ghost" href="{{ p.links.linkedin }}">LinkedIn</a>
+      <a class="btn ghost" href="{{ p.links.github }}">GitHub</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p class="dim">{{ t.footer.built }} {{ generated }}.</p>
+</footer>
+<script src="{{ base }}/assets/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+# Dados pessoais do portfólio. Todo campo {pt, en} é bilíngue.
+# Se faltar um idioma, o site mostra o que existir e avisa discretamente.
+
+name: Gabriel Toledo de Oliveira
+handle: Toledooo
+title:
+  pt: Desenvolvedor Python | Engenheiro de Software
+  en: Python Developer | Software Engineer
+tagline:
+  pt: Back-end, APIs RESTful, automação de processos (RPA) e integração com LLMs.
+  en: Back-end, RESTful APIs, process automation (RPA) and LLM integration.
+
+# Quantos projetos aparecem no máximo (os marcados com featured vêm primeiro).
+max_projects: 6
+
+# Etapas do diagrama animado do Hero.
+pipeline: [FastAPI, RPA, LLM, SQL]
+
+links:
+  github: https://github.com/Toledooo
+  linkedin: https://linkedin.com/in/gabriel-toledo-dev
+  email: gtoledo.contato@gmail.com
+
+about:
+  summary:
+    pt: >-
+      Minha base une infraestrutura e suporte avançado (N2/N3) ao desenvolvimento
+      de software. Isso me dá capacidade analítica para diagnosticar falhas na raiz
+      e projetar APIs e automações resilientes, focadas em eliminar gargalos
+      operacionais.
+    en: >-
+      My background combines infrastructure and advanced support (L2/L3) with
+      software development. It gives me the analytical skills to diagnose failures
+      at the root and to design resilient APIs and automations aimed at removing
+      real operational bottlenecks.
+  focus:
+    pt: Desenvolvimento back-end, arquitetura de APIs RESTful, automação de processos (RPA) e integração com inteligência artificial (LLMs).
+    en: Back-end development, RESTful API architecture, process automation (RPA) and integration with AI (LLMs).
+  seeking:
+    pt: >-
+      Vagas efetivas (CLT/PJ) ou projetos freelance como Desenvolvedor Python /
+      Back-end (Júnior ou Pleno). Atuação remota, ou presencial/híbrida em
+      Vacaria - RS e região.
+    en: >-
+      Full-time roles (CLT/PJ contract) or freelance projects as a Python /
+      Back-end Developer (Junior or Mid-level). Remote, or on-site/hybrid in
+      Vacaria - RS, Brazil, and the surrounding region.
+
+stack:
+  main: [Python, FastAPI, "SQL (Oracle/PostgreSQL)"]
+  other: [n8n, Selenium, Pandas, Docker, Git, Django, SQLAlchemy, SQLModel, MySQL, MariaDB, Java]
+
+experience:
+  - role:
+      pt: Desenvolvedor de Sistemas | Freelancer
+      en: Software Developer | Freelancer
+    company: ""
+    period:
+      pt: Out 2025 – atual
+      en: Oct 2025 – present
+    bullets:
+      - pt: Arquitetura e desenvolvimento de APIs REST customizadas de alta performance com Python e FastAPI.
+        en: Architecture and development of custom, high-performance REST APIs with Python and FastAPI.
+      - pt: Pipelines de RPA (Python e n8n) e integração de sistemas com APIs de modelos de linguagem (LLMs) para tratamento inteligente de dados.
+        en: RPA pipelines (Python and n8n) and system integration with language model (LLM) APIs for intelligent data processing.
+  - role:
+      pt: Assistente de Suporte e Desenvolvimento II
+      en: Support and Development Assistant II
+    company: Transportes Cavalinho Ltda
+    period:
+      pt: Mai 2024 – Out 2025
+      en: May 2024 – Oct 2025
+    bullets:
+      - pt: Fluxos de RPA para automação de rotinas internas, reduzindo intervenções manuais em sistemas corporativos.
+        en: RPA flows to automate internal routines, reducing manual intervention in corporate systems.
+      - pt: Manutenção e elaboração de queries complexas em banco de dados Oracle.
+        en: Maintenance and authoring of complex queries on Oracle databases.
+      - pt: Troubleshooting e suporte técnico avançado (N2/N3).
+        en: Troubleshooting and advanced technical support (L2/L3).
+  - role:
+      pt: Assistente de TI I
+      en: IT Assistant I
+    company: Transportes Cavalinho Ltda
+    period:
+      pt: 2023 – 2024
+      en: 2023 – 2024
+    bullets:
+      - pt: Scripts de web scraping e extração de dados com Python, Pandas e Selenium.
+        en: Web scraping and data extraction scripts with Python, Pandas and Selenium.
+      - pt: Atendimento de helpdesk e manutenção de infraestrutura e hardware.
+        en: Helpdesk support and infrastructure/hardware maintenance.
+
+education:
+  - title:
+      pt: Bacharelado em Sistemas de Informação
+      en: Bachelor's degree in Information Systems
+    school: IFRS, Campus Vacaria
+    period:
+      pt: Cursando, desde 2023
+      en: In progress, since 2023
+  - title:
+      pt: Técnico em Multimídia Integrado ao Ensino Médio
+      en: Technical degree in Multimedia, integrated with high school
+    school: IFRS, Campus Vacaria
+    period:
+      pt: Concluído em 2022
+      en: Completed in 2022
